@@ -42,6 +42,15 @@ a:hover{text-decoration:underline}
 .iconbtn{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);cursor:pointer}
 .iconbtn:hover{color:var(--text);background:var(--raised);border-color:var(--line)}
 
+.pillbtn{display:flex;align-items:center;gap:7px;height:34px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--muted);font:500 13.5px var(--sans);cursor:pointer;white-space:nowrap}
+.pillbtn:hover{color:var(--text);border-color:var(--line2)}
+.pillbtn[aria-pressed="true"]{color:var(--accent);border-color:var(--accent);background:var(--accent-tint)}
+body.hidedone .slide.isdone{display:none}
+body.hidedone nav.side a.done{display:none}
+.alldone{display:none;padding:48px 0;text-align:center;color:var(--muted)}
+.alldone b{display:block;font-family:var(--serif);font-size:22px;color:var(--text);margin-bottom:6px}
+body.hidedone .unit.on.complete .alldone{display:block}
+
 /* ---------- layout + sidebar ---------- */
 .layout{display:flex}
 nav.side{position:sticky;top:var(--top);align-self:flex-start;flex:0 0 var(--side);width:var(--side);height:calc(100vh - var(--top));overflow:auto;

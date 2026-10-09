@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=2">
-<script src="assets/site.js?v=2"></script>
+<link rel="stylesheet" href="assets/style.css?v=3">
+<script src="assets/site.js?v=3"></script>
 </head>
 <body>
 <div class="top">
@@ -19,6 +19,9 @@
   <nav class="tabs" aria-label="Units"></nav>
   <div class="tools">
     <label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search this unit"></label>
+    <button id="donefilter" class="pillbtn" type="button" title="Show only the sections you haven't marked done" aria-pressed="false">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg><span>Hide done</span>
+    </button>
     <button id="theme" class="iconbtn" type="button" title="Light / dark theme" aria-label="Toggle theme">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
     </button>
@@ -1365,8 +1368,7 @@
       <li>Calculate the expected spot exchange rate (USD/EUR) at the end of the year using the exact Relative PPP formula.</li>
       <li>Determine the percentage appreciation or depreciation of the Euro relative to the US Dollar over this period.</li>
     </ul>
-    <p class="blank">(No answer slide in the PPT.)</p>
-  <hr class="soft">
+    <p class="blank">(No answer slide in the PPT.)</p>  <hr class="soft">
     <p>The current exchange rate is &#8377;80/US$. According to Relative PPP, the exchange rate is expected to become &#8377;84/US$ after one year. If US inflation is expected to be 3%, estimate India's expected inflation rate.</p>
     <details class="sol"><summary>Show answer</summary><div>
       <p class="math">S<sub>1</sub> = S<sub>0</sub> <span class="frac"><span>1 + &pi;<sub>India</sub></span><span>1 + &pi;<sub>USA</sub></span></span></p>
@@ -1388,6 +1390,7 @@
       <h5>Approximate rupee-adjusted investment return</h5>
       <p>The US security earns 8%, while the currency provides approximately 3.92% return.</p>
       <p class="math">(1.08)(1.0392) &minus; 1 = 12.31%</p>
+      <p class="flag"><b>Check:</b> 1.08 &times; 1.0392 = 1.1223, so the answer is <b>12.23%</b> (12.24% without rounding), not 12.31% as written on the slide.</p>
     </div></details>
   <hr class="soft">
     <p>An Indian investor is considering investing in a US security. Current exchange rate = &#8377;85/US$. Expected US investment return = 12%. Expected Indian inflation = 5%. Expected US inflation = 2%.</p>
@@ -1433,6 +1436,7 @@
     <p>The spot exchange rate is &#8377;82/US$. The Indian interest rate is 7%, and the US interest rate is 4%. Calculate: The 1-year forward exchange rate. The forward premium/discount on the US dollar.</p>
     <details class="sol"><summary>Show solution</summary><div>
       <p class="math">F = 82 &times; <span class="frac"><span>1.07</span><span>1.04</span></span> = &#8377;84.36/$</p>
+      <p class="flag"><b>Check:</b> 82 &times; 1.07 / 1.04 = 84.3654, which rounds to <b>&#8377;84.37/$</b>. The 2.88% premium below is still correct.</p>
       <p class="math">Forward premium: <span class="frac"><span>F &minus; S</span><span>S</span></span> &times; 100 = <span class="frac"><span>84.36 &minus; 82</span><span>82</span></span> &times; 100 = 2.88%</p>
     </div></details>
   </article>

@@ -114,6 +114,7 @@
         var lab = u.querySelector('.progress-label');
         if (bar) bar.style.width = (all ? (100 * d / all) : 0) + '%';
         if (lab) lab.textContent = d + ' of ' + all + ' sections done';
+        u.classList.toggle('complete', all > 0 && d === all);
       });
     }
 
@@ -154,6 +155,24 @@
       buildSide();
     }
     search.addEventListener('input', runSearch);
+
+    // hide done sections / show all
+    var df = document.getElementById('donefilter');
+    function setFilter(on) {
+      document.body.classList.toggle('hidedone', on);
+      df.setAttribute('aria-pressed', on ? 'true' : 'false');
+      df.querySelector('span').textContent = on ? 'Show all' : 'Hide done';
+      df.title = on ? 'Show every section again' : "Show only the sections you haven't marked done";
+      localStorage.setItem(KEY + 'hidedone', on ? '1' : '');
+    }
+    df.onclick = function () { setFilter(!document.body.classList.contains('hidedone')); };
+    setFilter(!!localStorage.getItem(KEY + 'hidedone'));
+    units.forEach(function (u) {
+      if (u.id === 'plan') return;
+      var m = document.createElement('div'); m.className = 'alldone';
+      m.innerHTML = '<b>Everything here is marked done.</b>Click "Show all" to see it again.';
+      u.appendChild(m);
+    });
 
     document.getElementById('theme').onclick = function () {
       var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
