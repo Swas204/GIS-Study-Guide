@@ -71,7 +71,8 @@
 
     function buildSide() {
       var u = current(); if (!u) return;
-      var html = '<h4>' + (u.id === 'plan' ? 'Course plan check' : 'From the slides') + '</h4>';
+      var hasSlides = u.id === 'plan' || u.querySelector('.slide:not(.note)');
+      var html = hasSlides ? '<h4>' + (u.id === 'plan' ? 'Course plan check' : 'From the slides') + '</h4>' : '';
       var inNotes = false;
       [].slice.call(u.querySelectorAll('.slide, .notes-banner, .partdiv')).forEach(function (s) {
         if (s.classList.contains('hide')) return;

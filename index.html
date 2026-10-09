@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=3">
-<script src="assets/site.js?v=3"></script>
+<link rel="stylesheet" href="assets/style.css?v=4">
+<script src="assets/site.js?v=4"></script>
 </head>
 <body>
 <div class="top">
@@ -178,7 +178,6 @@
 
   <article class="slide"><h3>Evolution and Significance of the Global Investment Environment</h3>
     <p class="src">Sources: Historical anchors from Federal Reserve History; current context from IMF, UNCTAD, World Bank, WTO and BIS.</p>
-    <p><b>Meaning:</b> The global investment environment refers to the economic, political, financial, technological, legal, and social conditions that influence investment decisions across countries.</p>
     <p>It is the combination of markets, institutions, rules, risks and opportunities that influence where and how capital moves across borders.</p>
     <div class="cols">
       <div><h5>Key capital channels</h5><ul><li>FDI (ownership and control)</li><li>Portfolio investment (equities and bonds)</li><li>Bank lending and project finance</li><li>Venture capital, infrastructure and private markets</li></ul></div>
@@ -1026,7 +1025,7 @@
 
   <div class="notes-banner">
     <h2>From the class notes</h2>
-    <p>Taught on 29 July and 1 August. The PPT gives the return formula and the ADR process, but not the three-part return idea, LRS, the ADR numericals or the industry analysis methods.</p>
+    <p>Taught on 29 July and 1 August. The PPT gives the return formula and the ADR process, but not the three-part return idea, LRS, the ADR numericals, the domestic vs ADR comparison or the industry analysis methods.</p>
   </div>
 
   <article class="slide note" id="u2-return-elements"><h3>Return elements: domestic vs international market</h3>
@@ -1034,7 +1033,6 @@
       <div><h5>In the domestic market, two elements are considered</h5><ol><li>Stock performance</li><li>Yield</li></ol></div>
       <div><h5>In the international market, three</h5><ol><li>Stock performance</li><li>Yield</li><li>Forex (foreign exchange rate)</li></ol></div>
     </div>
-    <p class="math">R<sub>e</sub> = <span class="frac"><span>(Closing price &minus; Opening price) + Dividend</span><span>Opening price</span></span> &times; 100</p>
     <p>What matters is the return you actually get in your own currency. From the notes: "It says 18% return but in reality we only get 11%." (Problem 3 below: the stock rose 18%, but the rupee return was about 11% because the dollar fell.)</p>
     <p>For a foreign stock, value both ends in rupees: opening value = US$ amount &times; opening rate, closing value = (US$ amount after price change) &times; closing rate.</p>
   </article>
@@ -1075,23 +1073,14 @@
     <p>Class questions asked here: How are companies listed in the US market? How are Indian companies listed in the US market? How are our shares made available to US investors? (Answer: through ADRs, see the ADR section above.)</p>
   </article>
 
-  <article class="slide note" id="u2-adr-process"><h3>Process of raising money from a foreign market (Infosys example)</h3>
-    <ol>
-      <li>An Indian company, e.g. Infosys, wants to raise US$100,000.</li>
-      <li>Infosys transfers that much value of shares to the Indian custodian bank. (e.g. if one share is worth 1000, quantity = 100,000 / 1000 = 100 shares)</li>
-      <li>This is transferred to the US depository bank.</li>
-      <li>Foreign investors can purchase the shares as ADRs.</li>
-    </ol>
-    <h5>Steps for an ADR numerical</h5>
+  <article class="slide note" id="u2-adr-problems"><h3>ADR numericals</h3>
+    <p>The issue process is the one on the slide (company &rarr; Indian custodian bank &rarr; US depository &rarr; ADRs to US investors). The numericals work out how many shares go to the custodian and what each ADR costs:</p>
     <ol>
       <li>Amount to be raised in &#8377; = US$ amount &times; exchange rate</li>
       <li>Number of shares required = Amount in &#8377; / market price of one share</li>
       <li>Number of ADRs = Number of shares / shares per ADR (the ADR ratio)</li>
       <li>ADR issue price (US$) = (share price in &#8377; &times; shares per ADR) / exchange rate</li>
     </ol>
-  </article>
-
-  <article class="slide note" id="u2-adr-problems"><h3>ADR numericals</h3>
     <p><b>Q1.</b> Infosys Ltd raises US$1,00,000 through ADRs. Exchange rate: $1 = &#8377;85. Market price of 1 Infosys share = &#8377;1200. ADR ratio: 1 ADR = 1 Infosys share. Calculate the number of ADRs to be issued.</p>
     <details class="sol"><summary>Show solution</summary><div>
       <ol>
@@ -1113,6 +1102,24 @@
     </div></details>
   </article>
 
+  <article class="slide note" id="u2-adr-vs-domestic"><h3>Domestic shares or ADR: comparing returns</h3>
+    <p>The same company can be bought as domestic shares in &#8377; or as ADRs in US$. For the ADR, convert both the cost and the final value (price plus dividend) into rupees at the rate on each date. The difference between the two returns comes from the exchange rate.</p>
+    <p><b>Q1.</b> Option A: domestic shares of ABC Ltd, initial share price &#8377;1000, 100 shares, share price after 1 year &#8377;1150, dividend &#8377;20/share. Option B: ADRs of ABC, 1 ADR = 2 domestic shares, ADR purchase price US$25, 50 ADRs, final ADR price US$30, dividend US$0.50/ADR, initial exchange rate &#8377;80/US$, final &#8377;85/US$. Calculate and compare the returns.</p>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p><b>Option A (domestic):</b> cost = 100 &times; 1000 = &#8377;1,00,000. Final value = 100 &times; 1150 + 100 &times; 20 = 1,15,000 + 2,000 = &#8377;1,17,000. Return = 17,000 / 1,00,000 = <b>17%</b>.</p>
+      <p><b>Option B (ADR):</b> cost = 50 &times; $25 = $1,250 &times; 80 = &#8377;1,00,000. Final value = (50 &times; $30 + 50 &times; $0.50) = $1,525 &times; 85 = &#8377;1,29,625. Return = 29,625 / 1,00,000 = <b>29.63%</b>.</p>
+      <p>The ADR gives the higher return because the US dollar <b>appreciated</b> from &#8377;80 to &#8377;85, so each dollar of price and dividend is worth more in rupees.</p>
+      <p class="flag">The notes stop after Option A. Option B is finished here with the same method. The notes' conclusion says the dollar "depreciated from 80 to 84", but it rose from 80 to 85.</p>
+    </div></details>
+    <p><b>Q2.</b> An Indian investor compares domestic shares and ADRs. Domestic: purchase price &#8377;500/share, 1000 shares, selling price &#8377;560, dividend &#8377;10/share. ADR: 1 ADR = 5 shares, purchase price US$40, 200 ADRs, selling price US$42, dividend US$0.50/ADR, initial exchange rate &#8377;80/US$, final &#8377;75/US$. Calculate the return from both.</p>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p><b>Domestic:</b> cost = 1000 &times; 500 = &#8377;5,00,000. Final value = 1000 &times; 560 + 1000 &times; 10 = &#8377;5,70,000. Return = <b>14%</b>.</p>
+      <p><b>ADR:</b> cost = 200 &times; $40 = $8,000 &times; 80 = &#8377;6,40,000. Sale = 200 &times; $42 = $8,400 &times; 75 = &#8377;6,30,000. Dividend = 200 &times; $0.50 &times; 75 = &#8377;7,500. Return = (6,37,500 &minus; 6,40,000) / 6,40,000 = <b>&minus;0.39%</b> (the notes round to &minus;0.40%).</p>
+      <p>Here the domestic shares win. The ADR price rose 5% and paid a dividend, but the dollar fell from &#8377;80 to &#8377;75, which wiped out the gain in rupee terms.</p>
+      <p class="flag">The notes write the sale as "42 &times; 2000"; it is 42 &times; 200 = $8,400. The question also says &#8377;5,00,000 is invested, but 200 ADRs at $40 and &#8377;80 cost &#8377;6,40,000, so the ADR return is worked on &#8377;6,40,000.</p>
+    </div></details>
+  </article>
+
   <article class="slide note" id="u2-industry"><h3>Methods of industry analysis: SWOT and SWOC</h3>
     <p>The notes list this as a class question ("What are the methods of industry analysis?") with the answer "SWOT, SWOC".</p>
     <ul>
@@ -1128,13 +1135,229 @@
   <header class="unit-head">
     <div class="eyebrow">Unit 3</div>
     <h1>Portfolio Construction and Risk Management</h1>
-    <p class="lede">No slides or class notes for this unit yet.</p>
+    <p class="lede">No slides for this unit yet, so everything here is from the class notes (Prisha's notes, headed "Risk &amp; Return / Portfolio Construction"). The T3 file (PPP &amp; IRP) is in Unit 4.</p>
     <div class="meta"><div class="progress"><span></span></div><span class="progress-label"></span></div>
   </header>
-  <article class="slide"><h3>Unit 3 topics (from the course plan, 13 hours, weeks 6&ndash;9)</h3>
-    <p>Risk: Risk and Uncertainty; Causes for risk; Types of Risk: Systematic and Unsystematic risk; Expected risk return trade-off; Calculation of expected return; Calculation of risk; Beta.</p>
-    <p>Portfolio management process; Portfolio return; Portfolio risk; International portfolio diversification; Feasible set of portfolios; Efficient set of portfolios; Selection of optimal portfolio; Markowitz model; Role of AI in portfolio management.</p>
-    <p class="flag">The file named T3 is titled "Unit 4 - PPP &amp; IRP" on its first slide, and the course plan puts PPP and IRP in Unit 4. So it is shown under the Unit 4 tab. Send the Unit 3 PPT when you get it and it can go here.</p>
+
+  <div class="notes-banner">
+    <h2>From the class notes</h2>
+    <p>Where the notes leave an answer unfinished, it is completed with the same method and marked. Slips in the notes are pointed out under each solution.</p>
+  </div>
+
+  <article class="slide note" id="u3-rca"><h3>Currency adjusted return (R<sub>CA</sub>)</h3>
+    <p>When an Indian investor holds a foreign share, the return in rupees comes from two things: the change in the share price and the change in the exchange rate.</p>
+    <p class="math">R<sub>CA</sub> = (1 + R<sub>S</sub>)(1 + R<sub>C</sub>) &minus; 1</p>
+    <ul>
+      <li><b>R<sub>S</sub></b> = (P<sub>1</sub> &minus; P<sub>0</sub>) / P<sub>0</sub>: return from the security, in its own currency</li>
+      <li><b>R<sub>C</sub></b> = (S<sub>1</sub> &minus; S<sub>0</sub>) / S<sub>0</sub>: return from the exchange rate change (S in &#8377; per unit of foreign currency)</li>
+    </ul>
+    <p>If the share price doesn't move, R<sub>S</sub> = 0 and R<sub>CA</sub> = R<sub>C</sub>. That is Unit 2 Problem 1: $5000 of US shares, &#8377;80 &rarr; &#8377;85, return 6.25%.</p>
+    <p><b>Q1.</b> An Indian investor buys shares of a US company for US$10,000. Initial share price US$100, final value US$115. Initial exchange rate &#8377;82/US$, final &#8377;94/US$. Calculate the rate of return on the US stock and the currency adjusted return in INR.</p>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p>R<sub>S</sub> = 11,500 / 10,000 &minus; 1 = <b>15%</b></p>
+      <p>R<sub>C</sub> = 94 / 82 &minus; 1 = 0.1463 = 14.63%</p>
+      <p>R<sub>CA</sub> = (1.15)(1.1463) &minus; 1 = <b>31.83%</b></p>
+      <p class="flag">The notes round R<sub>C</sub> to 0.146 first and get 31.79%. Unrounded it is 31.83%.</p>
+    </div></details>
+    <p><b>Q2.</b> Purchase price &euro;100 per share, selling price &euro;112. Initial exchange rate &#8377;90/&euro;, final &#8377;85/&euro;. Calculate R<sub>CA</sub>.</p>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p>R<sub>S</sub> = (112 &minus; 100) / 100 = <b>12%</b></p>
+      <p>R<sub>C</sub> = 85 / 90 &minus; 1 = <b>&minus;5.56%</b> (the euro fell against the rupee)</p>
+      <p>R<sub>CA</sub> = (1.12)(1 &minus; 0.0556) &minus; 1 = 1.12 &times; 0.9444 &minus; 1 = <b>5.78%</b></p>
+      <p class="flag">The notes work out R<sub>C</sub> = &minus;5.56% correctly, but then multiply by 1.0588 (a 5.88% <i>gain</i>) and get 18.59%. With the currency loss it is 5.78%.</p>
+    </div></details>
+  </article>
+
+  <article class="slide note" id="u3-scenarios"><h3>Expected return and risk under economic scenarios</h3>
+    <p>When the share price and exchange rate depend on the state of the economy (Boom, Normal, Recession), find R<sub>CA</sub> for each scenario, then weight by its probability P.</p>
+    <p class="math">Expected return: E(R<sub>CA</sub>) = &Sigma; R<sub>CA</sub> &times; P</p>
+    <p class="math">Risk: &sigma; = &radic;( &Sigma; (R<sub>CA</sub> &minus; E(R<sub>CA</sub>))&sup2; &times; P )</p>
+    <p><b>Q1.</b> Calculate the expected return.</p>
+    <table><tr><th>Scenario</th><th class="num">P</th><th class="num">Stock return R<sub>S</sub></th><th class="num">Currency return R<sub>C</sub></th></tr>
+      <tr><td>Boom</td><td class="num">0.3</td><td class="num">25%</td><td class="num">5%</td></tr>
+      <tr><td>Normal</td><td class="num">0.5</td><td class="num">12%</td><td class="num">2%</td></tr>
+      <tr><td>Recession</td><td class="num">0.2</td><td class="num">&minus;10%</td><td class="num">&minus;5%</td></tr></table>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p>Boom: (1.25)(1.05) &minus; 1 = 31.25%<br>Normal: (1.12)(1.02) &minus; 1 = 14.24%<br>Recession: (0.90)(0.95) &minus; 1 = &minus;14.50%</p>
+      <p>E(R<sub>CA</sub>) = 31.25 &times; 0.3 + 14.24 &times; 0.5 + (&minus;14.50) &times; 0.2 = 9.38 + 7.12 &minus; 2.90 = <b>13.60%</b></p>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q2.</b> An Indian investor is evaluating an investment in a US based company. The share price and exchange rate are expected to move with economic conditions. Calculate the expected return.</p>
+    <div class="wrap"><table><tr><th>Condition</th><th class="num">P</th><th class="num">Initial price ($)</th><th class="num">Final price ($)</th><th class="num">Initial rate (&#8377;/$)</th><th class="num">Final rate</th></tr>
+      <tr><td>Boom</td><td class="num">0.3</td><td class="num">100</td><td class="num">125</td><td class="num">82</td><td class="num">86</td></tr>
+      <tr><td>Normal</td><td class="num">0.5</td><td class="num">100</td><td class="num">112</td><td class="num">82</td><td class="num">84</td></tr>
+      <tr><td>Recession</td><td class="num">0.2</td><td class="num">100</td><td class="num">90</td><td class="num">82</td><td class="num">78</td></tr></table></div>
+    <details class="sol"><summary>Show solution</summary><div>
+      <table><tr><th></th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub></th><th class="num">R<sub>CA</sub> &times; P</th></tr>
+        <tr><td>Boom</td><td class="num">25%</td><td class="num">4/82 = 4.88%</td><td class="num">31.10%</td><td class="num">9.33</td></tr>
+        <tr><td>Normal</td><td class="num">12%</td><td class="num">2/82 = 2.44%</td><td class="num">14.73%</td><td class="num">7.37</td></tr>
+        <tr><td>Recession</td><td class="num">&minus;10%</td><td class="num">&minus;4/82 = &minus;4.88%</td><td class="num">&minus;14.39%</td><td class="num">&minus;2.88</td></tr>
+        <tr class="sub"><td colspan="4">Expected return</td><td class="num">13.82%</td></tr></table>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q3.</b> An Indian investor is considering a German company. The share price and the euro exchange rate vary with economic conditions. Calculate the expected exchange-rate-adjusted return and the investment risk.</p>
+    <div class="wrap"><table><tr><th>Condition</th><th class="num">P</th><th class="num">Initial price (&euro;)</th><th class="num">Final price</th><th class="num">Initial rate (&#8377;/&euro;)</th><th class="num">Final rate</th></tr>
+      <tr><td>Boom</td><td class="num">0.25</td><td class="num">80</td><td class="num">96</td><td class="num">90</td><td class="num">94</td></tr>
+      <tr><td>Normal</td><td class="num">0.50</td><td class="num">80</td><td class="num">87.20</td><td class="num">90</td><td class="num">92</td></tr>
+      <tr><td>Recession</td><td class="num">0.25</td><td class="num">80</td><td class="num">68</td><td class="num">90</td><td class="num">86</td></tr></table></div>
+    <details class="sol"><summary>Show solution</summary><div>
+      <div class="wrap"><table><tr><th></th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub></th><th class="num">d = R<sub>CA</sub> &minus; E</th><th class="num">d&sup2; &times; P</th></tr>
+        <tr><td>Boom</td><td class="num">20%</td><td class="num">4.44%</td><td class="num">25.33%</td><td class="num">17.98</td><td class="num">80.85</td></tr>
+        <tr><td>Normal</td><td class="num">9%</td><td class="num">2.22%</td><td class="num">11.42%</td><td class="num">4.07</td><td class="num">8.29</td></tr>
+        <tr><td>Recession</td><td class="num">&minus;15%</td><td class="num">&minus;4.44%</td><td class="num">&minus;18.78%</td><td class="num">&minus;26.13</td><td class="num">170.67</td></tr>
+        <tr class="sub"><td colspan="5">Total</td><td class="num">259.81</td></tr></table></div>
+      <p>E(R<sub>CA</sub>) = 25.33 &times; 0.25 + 11.42 &times; 0.5 + (&minus;18.78) &times; 0.25 = 6.33 + 5.71 &minus; 4.69 = <b>7.35%</b></p>
+      <p>Risk &sigma; = &radic;259.81 = <b>16.12%</b></p>
+      <p class="flag">The notes stop at the total (259.74, from rounding). The square root is added here.</p>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q4.</b> A UK share (&pound;). Calculate (i) the currency adjusted return in each scenario, (ii) the expected adjusted return, (iii) the investment risk (SD of the currency adjusted return).</p>
+    <div class="wrap"><table><tr><th>Condition</th><th class="num">P</th><th class="num">Initial price (&pound;)</th><th class="num">Final price</th><th class="num">Initial rate (&#8377;/&pound;)</th><th class="num">Final rate</th></tr>
+      <tr><td>Boom</td><td class="num">0.30</td><td class="num">75</td><td class="num">90</td><td class="num">88</td><td class="num">91</td></tr>
+      <tr><td>Normal</td><td class="num">0.45</td><td class="num">75</td><td class="num">82.50</td><td class="num">88</td><td class="num">89</td></tr>
+      <tr><td>Recession</td><td class="num">0.25</td><td class="num">75</td><td class="num">63</td><td class="num">88</td><td class="num">84</td></tr></table></div>
+    <details class="sol"><summary>Show solution</summary><div>
+      <div class="wrap"><table><tr><th></th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub></th><th class="num">d = R<sub>CA</sub> &minus; E</th><th class="num">d&sup2; &times; P</th></tr>
+        <tr><td>Boom</td><td class="num">20%</td><td class="num">3.41%</td><td class="num">24.09%</td><td class="num">16.76</td><td class="num">84.23</td></tr>
+        <tr><td>Normal</td><td class="num">10%</td><td class="num">1.14%</td><td class="num">11.25%</td><td class="num">3.92</td><td class="num">6.90</td></tr>
+        <tr><td>Recession</td><td class="num">&minus;16%</td><td class="num">&minus;4.55%</td><td class="num">&minus;19.82%</td><td class="num">&minus;27.15</td><td class="num">184.33</td></tr>
+        <tr class="sub"><td colspan="5">Total</td><td class="num">275.45</td></tr></table></div>
+      <p>(ii) E(R<sub>CA</sub>) = 24.09 &times; 0.30 + 11.25 &times; 0.45 + (&minus;19.82) &times; 0.25 = 7.23 + 5.06 &minus; 4.95 = <b>7.34%</b></p>
+      <p>(iii) Risk &sigma; = &radic;275.45 = <b>16.60%</b></p>
+      <p class="flag">The notes only reach the R<sub>CA</sub> column, so parts (ii) and (iii) are finished here. They also write the Recession R<sub>CA</sub> as 0.1978 without the minus sign; it is &minus;19.82% (0.84 &times; 0.9545 &minus; 1).</p>
+    </div></details>
+  </article>
+
+  <article class="slide note" id="u3-monthly"><h3>Average return and risk from monthly prices</h3>
+    <p>With a run of monthly closing prices and exchange rates, find R<sub>S</sub>, R<sub>C</sub> and R<sub>CA</sub> for each month, then:</p>
+    <p class="math">Average monthly R<sub>CA</sub> = &Sigma; R<sub>CA</sub> / n</p>
+    <p class="math">Risk &sigma; = &radic;( &Sigma; (R<sub>CA</sub> &minus; Avg R<sub>CA</sub>)&sup2; / n )</p>
+    <ul>
+      <li><b>Population</b>: divide by <b>n</b></li>
+      <li><b>Sample</b>: divide by <b>n &minus; 1</b></li>
+    </ul>
+    <p>n is the number of monthly <i>returns</i>, which is one less than the number of prices.</p>
+    <p><b>Q1.</b> Calculate the average monthly currency adjusted return and the risk.</p>
+    <table><tr><th>Month</th><th class="num">Share price ($)</th><th class="num">Exchange rate (&#8377;/$)</th></tr>
+      <tr><td>Start</td><td class="num">80</td><td class="num">83</td></tr><tr><td>Jan</td><td class="num">84</td><td class="num">84</td></tr><tr><td>Feb</td><td class="num">87</td><td class="num">82.5</td></tr><tr><td>Mar</td><td class="num">85</td><td class="num">85</td></tr><tr><td>Apr</td><td class="num">91</td><td class="num">86.5</td></tr><tr><td>May</td><td class="num">96</td><td class="num">88</td></tr></table>
+    <details class="sol"><summary>Show solution</summary><div>
+      <table><tr><th>Month</th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub></th><th class="num">d</th><th class="num">d&sup2;</th></tr>
+        <tr><td>Jan</td><td class="num">5.00%</td><td class="num">1.20%</td><td class="num">6.265</td><td class="num">1.281</td><td class="num">1.640</td></tr>
+        <tr><td>Feb</td><td class="num">3.57%</td><td class="num">&minus;1.79%</td><td class="num">1.722</td><td class="num">&minus;3.262</td><td class="num">10.642</td></tr>
+        <tr><td>Mar</td><td class="num">&minus;2.30%</td><td class="num">3.03%</td><td class="num">0.662</td><td class="num">&minus;4.322</td><td class="num">18.681</td></tr>
+        <tr><td>Apr</td><td class="num">7.06%</td><td class="num">1.76%</td><td class="num">8.948</td><td class="num">3.964</td><td class="num">15.712</td></tr>
+        <tr><td>May</td><td class="num">5.49%</td><td class="num">1.73%</td><td class="num">7.324</td><td class="num">2.340</td><td class="num">5.475</td></tr>
+        <tr class="sub"><td colspan="3">Total</td><td class="num">24.921</td><td></td><td class="num">52.150</td></tr></table>
+      <p>Average monthly R<sub>CA</sub> = 24.921 / 5 = <b>4.98%</b></p>
+      <p>Risk (population) = &radic;(52.150 / 5) = <b>3.23%</b>. As a sample: &radic;(52.150 / 4) = 3.61%.</p>
+      <p class="flag">The notes add a 0 for the starting month and divide by 6, which gives 4.1535% and 3.484%. The starting month has no return of its own, so there are 5 returns, not 6.</p>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q2.</b> An investor is evaluating US company shares using the monthly share prices and exchange rates for the first half of the year. No dividend was received. Calculate (i) monthly share return R<sub>S</sub>, (ii) monthly currency return R<sub>C</sub>, (iii) monthly currency adjusted return, (iv) the average monthly currency adjusted return, (v) the risk (SD).</p>
+    <table><tr><th>Month</th><th class="num">Closing share price ($)</th><th class="num">Closing exchange rate (&#8377;/$)</th></tr>
+      <tr><td>Jan</td><td class="num">72</td><td class="num">82</td></tr><tr><td>Feb</td><td class="num">76</td><td class="num">83.5</td></tr><tr><td>Mar</td><td class="num">74</td><td class="num">81.5</td></tr><tr><td>Apr</td><td class="num">79</td><td class="num">84.5</td></tr><tr><td>May</td><td class="num">83</td><td class="num">85.5</td></tr><tr><td>Jun</td><td class="num">81</td><td class="num">87</td></tr></table>
+    <details class="sol"><summary>Show solution</summary><div>
+      <table><tr><th>Month</th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub></th><th class="num">d</th><th class="num">d&sup2;</th></tr>
+        <tr><td>Feb</td><td class="num">5.56%</td><td class="num">1.83%</td><td class="num">7.49</td><td class="num">3.72</td><td class="num">13.85</td></tr>
+        <tr><td>Mar</td><td class="num">&minus;2.63%</td><td class="num">&minus;2.40%</td><td class="num">&minus;4.96</td><td class="num">&minus;8.73</td><td class="num">76.18</td></tr>
+        <tr><td>Apr</td><td class="num">6.76%</td><td class="num">3.68%</td><td class="num">10.69</td><td class="num">6.92</td><td class="num">47.92</td></tr>
+        <tr><td>May</td><td class="num">5.06%</td><td class="num">1.18%</td><td class="num">6.31</td><td class="num">2.54</td><td class="num">6.47</td></tr>
+        <tr><td>Jun</td><td class="num">&minus;2.41%</td><td class="num">1.75%</td><td class="num">&minus;0.70</td><td class="num">&minus;4.46</td><td class="num">19.91</td></tr>
+        <tr class="sub"><td colspan="3">Total</td><td class="num">18.82</td><td></td><td class="num">164.33</td></tr></table>
+      <p>(iv) Average monthly R<sub>CA</sub> = 18.82 / 5 = <b>3.76%</b></p>
+      <p>(v) Risk (population) = &radic;(164.33 / 5) = <b>5.73%</b>. As a sample: &radic;(164.33 / 4) = 6.41%.</p>
+      <p class="flag">The notes have April R<sub>C</sub> = 0.0301 and May R<sub>C</sub> = 0.0178. They are (84.5 &minus; 81.5)/81.5 = 3.68% and (85.5 &minus; 84.5)/84.5 = 1.18%. That changes April and May R<sub>CA</sub> to 10.69% and 6.31% (notes: 10.03% and 6.94%), and the average to 3.76% (notes: 19.28 / 5 = 3.80). The notes stop before the risk, which is added here.</p>
+    </div></details>
+    <h5>Interpretation questions on Q2 (answers from the notes)</h5>
+    <p><b>In some months the share price rose and the currency movement also helped the Indian investor. Why is the currency adjusted return higher than the share return then?</b><br>Because the investor benefits from both the increase in share price and the favourable currency movement.</p>
+    <p><b>In March both the share return (&minus;2.63%) and the currency return (&minus;2.40%) were negative, giving R<sub>CA</sub> = &minus;4.96%. What does this tell you about exchange rate movements for Indian investors?</b><br>The share return fell and the currency also moved against the Indian investor, so the currency adjusted return fell further. International investors face not only security risk but also foreign exchange risk.</p>
+    <p><b>Suppose the US share price falls but the US dollar appreciates against the rupee. Can currency movement reduce the investor's loss?</b><br>Yes. Currency appreciation can act as a partial offset to a decline in the share price.</p>
+    <p><b>If the investor looked only at the share return and ignored the exchange rate, would performance be overstated or understated?</b><br>Both can happen. In February R<sub>S</sub> = 5.56% but R<sub>CA</sub> = 7.49%, so ignoring the currency understates performance. In March R<sub>S</sub> = &minus;2.63% but R<sub>CA</sub> = &minus;4.96%, so ignoring it overstates performance (the notes give the February example).</p>
+  </article>
+
+  <article class="slide note" id="u3-beta"><h3>Beta</h3>
+    <p>Beta measures how much a security's return moves with the market's return.</p>
+    <p class="math">&beta; = <span class="frac"><span>Cov(R<sub>i</sub>, R<sub>m</sub>)</span><span>Var(R<sub>m</sub>)</span></span></p>
+    <p class="math">Cov(R<sub>i</sub>, R<sub>m</sub>) = <span class="frac"><span>&Sigma; (R<sub>i</sub> &minus; R&#772;<sub>i</sub>)(R<sub>m</sub> &minus; R&#772;<sub>m</sub>)</span><span>n</span></span> &nbsp;&nbsp; Var(R<sub>m</sub>) = <span class="frac"><span>&Sigma; (R<sub>m</sub> &minus; R&#772;<sub>m</sub>)&sup2;</span><span>n</span></span></p>
+    <p>R<sub>i</sub> is the security's return. For a foreign security held by an Indian investor, use the currency adjusted return. R<sub>m</sub> is the market index return.</p>
+    <p class="src">Reading the value (added for context, not in the notes): &beta; &gt; 1 means the security moves more than the market (aggressive). &beta; &lt; 1 means it moves less (defensive). &beta; = 1 means it moves with the market.</p>
+    <p><b>Q1.</b> An Indian investor invests in a US tech company and compares its monthly currency adjusted returns in INR with the monthly returns of the S&amp;P 500. Calculate the beta and interpret it.</p>
+    <table><tr><th>Month</th><th class="num">US co. R<sub>CA</sub> (%)</th><th class="num">S&amp;P 500 (%)</th></tr>
+      <tr><td>Jan</td><td class="num">6</td><td class="num">4</td></tr><tr><td>Feb</td><td class="num">2</td><td class="num">1</td></tr><tr><td>Mar</td><td class="num">1</td><td class="num">2</td></tr><tr><td>Apr</td><td class="num">9</td><td class="num">6</td></tr><tr><td>May</td><td class="num">7</td><td class="num">5</td></tr></table>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p>R&#772;<sub>i</sub> = 25 / 5 = 5%, R&#772;<sub>m</sub> = 18 / 5 = 3.6%</p>
+      <table><tr><th></th><th class="num">R<sub>i</sub> &minus; R&#772;<sub>i</sub></th><th class="num">R<sub>m</sub> &minus; R&#772;<sub>m</sub></th><th class="num">Product</th><th class="num">(R<sub>m</sub> &minus; R&#772;<sub>m</sub>)&sup2;</th></tr>
+        <tr><td>Jan</td><td class="num">1</td><td class="num">0.4</td><td class="num">0.4</td><td class="num">0.16</td></tr>
+        <tr><td>Feb</td><td class="num">&minus;3</td><td class="num">&minus;2.6</td><td class="num">7.8</td><td class="num">6.76</td></tr>
+        <tr><td>Mar</td><td class="num">&minus;4</td><td class="num">&minus;1.6</td><td class="num">6.4</td><td class="num">2.56</td></tr>
+        <tr><td>Apr</td><td class="num">4</td><td class="num">2.4</td><td class="num">9.6</td><td class="num">5.76</td></tr>
+        <tr><td>May</td><td class="num">2</td><td class="num">1.4</td><td class="num">2.8</td><td class="num">1.96</td></tr>
+        <tr class="sub"><td colspan="3">Total</td><td class="num">27</td><td class="num">17.2</td></tr></table>
+      <p>Cov = 27 / 5 = 5.4. Var = 17.2 / 5 = 3.44. <b>&beta; = 5.4 / 3.44 = 1.57</b></p>
+      <p>The stock is more volatile than the S&amp;P 500: for a 1% move in the index, its rupee return tends to move about 1.57%.</p>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q2.</b> From the following, calculate beta using the covariance formula.</p>
+    <table><tr><th>Month</th><th class="num">ABC return (%)</th><th class="num">BSE Index (%)</th></tr>
+      <tr><td>1</td><td class="num">8.53</td><td class="num">7.56</td></tr><tr><td>2</td><td class="num">9.65</td><td class="num">8.46</td></tr><tr><td>3</td><td class="num">12.25</td><td class="num">10.30</td></tr><tr><td>4</td><td class="num">9.00</td><td class="num">12.25</td></tr><tr><td>5</td><td class="num">13.75</td><td class="num">11.75</td></tr><tr><td>6</td><td class="num">6.65</td><td class="num">9.42</td></tr></table>
+    <details class="sol"><summary>Show solution (worked here; the notes give only the question)</summary><div>
+      <p>R&#772;<sub>i</sub> = 59.83 / 6 = 9.972, R&#772;<sub>m</sub> = 59.74 / 6 = 9.957</p>
+      <table><tr><th>Month</th><th class="num">R<sub>i</sub> &minus; R&#772;<sub>i</sub></th><th class="num">R<sub>m</sub> &minus; R&#772;<sub>m</sub></th><th class="num">Product</th><th class="num">(R<sub>m</sub> &minus; R&#772;<sub>m</sub>)&sup2;</th></tr>
+        <tr><td>1</td><td class="num">&minus;1.442</td><td class="num">&minus;2.397</td><td class="num">3.455</td><td class="num">5.744</td></tr>
+        <tr><td>2</td><td class="num">&minus;0.322</td><td class="num">&minus;1.497</td><td class="num">0.481</td><td class="num">2.240</td></tr>
+        <tr><td>3</td><td class="num">2.278</td><td class="num">0.343</td><td class="num">0.782</td><td class="num">0.118</td></tr>
+        <tr><td>4</td><td class="num">&minus;0.972</td><td class="num">2.293</td><td class="num">&minus;2.228</td><td class="num">5.259</td></tr>
+        <tr><td>5</td><td class="num">3.778</td><td class="num">1.793</td><td class="num">6.776</td><td class="num">3.216</td></tr>
+        <tr><td>6</td><td class="num">&minus;3.322</td><td class="num">&minus;0.537</td><td class="num">1.783</td><td class="num">0.288</td></tr>
+        <tr class="sub"><td colspan="3">Total</td><td class="num">11.049</td><td class="num">16.865</td></tr></table>
+      <p>Cov = 11.049 / 6 = 1.841. Var = 16.865 / 6 = 2.811. <b>&beta; = 1.841 / 2.811 = 0.66</b>, so ABC is less volatile than the BSE index.</p>
+    </div></details>
+    <hr class="soft">
+    <p><b>Q3.</b> An Indian investor buys shares of a US security. Calculate the beta of the US security with respect to the BSE Index.</p>
+    <div class="wrap"><table><tr><th>Month</th><th class="num">Closing share price ($)</th><th class="num">Exchange rate (&#8377;/$)</th><th class="num">BSE Index return (%)</th></tr>
+      <tr><td>Jan</td><td class="num">80</td><td class="num">83</td><td class="num">2</td></tr><tr><td>Feb</td><td class="num">82</td><td class="num">84</td><td class="num">3.5</td></tr><tr><td>Mar</td><td class="num">79</td><td class="num">83.5</td><td class="num">2</td></tr><tr><td>Apr</td><td class="num">85</td><td class="num">84.5</td><td class="num">4</td></tr><tr><td>May</td><td class="num">87</td><td class="num">85</td><td class="num">2.5</td></tr><tr><td>Jun</td><td class="num">84</td><td class="num">84</td><td class="num">&minus;1.5</td></tr><tr><td>Jul</td><td class="num">89</td><td class="num">85.5</td><td class="num">5</td></tr><tr><td>Aug</td><td class="num">91</td><td class="num">86</td><td class="num">3</td></tr><tr><td>Sep</td><td class="num">88</td><td class="num">85</td><td class="num">&minus;2.5</td></tr><tr><td>Oct</td><td class="num">94</td><td class="num">86.5</td><td class="num">4.5</td></tr></table></div>
+    <details class="sol"><summary>Show solution (the notes start it; finished here)</summary><div>
+      <p>Step 1: find R<sub>CA</sub> = (1 + R<sub>S</sub>)(1 + R<sub>C</sub>) &minus; 1 for each month from February. January has no return because it is the starting point, so January's BSE return isn't used.</p>
+      <div class="wrap"><table><tr><th>Month</th><th class="num">R<sub>S</sub></th><th class="num">R<sub>C</sub></th><th class="num">R<sub>CA</sub> (R<sub>i</sub>)</th><th class="num">BSE (R<sub>m</sub>)</th><th class="num">Product of deviations</th><th class="num">(R<sub>m</sub> &minus; R&#772;<sub>m</sub>)&sup2;</th></tr>
+        <tr><td>Feb</td><td class="num">2.50%</td><td class="num">1.20%</td><td class="num">3.735</td><td class="num">3.5</td><td class="num">1.614</td><td class="num">1.494</td></tr>
+        <tr><td>Mar</td><td class="num">&minus;3.66%</td><td class="num">&minus;0.60%</td><td class="num">&minus;4.232</td><td class="num">2</td><td class="num">1.846</td><td class="num">0.077</td></tr>
+        <tr><td>Apr</td><td class="num">7.59%</td><td class="num">1.20%</td><td class="num">8.883</td><td class="num">4</td><td class="num">11.140</td><td class="num">2.966</td></tr>
+        <tr><td>May</td><td class="num">2.35%</td><td class="num">0.59%</td><td class="num">2.959</td><td class="num">2.5</td><td class="num">0.121</td><td class="num">0.049</td></tr>
+        <tr><td>Jun</td><td class="num">&minus;3.45%</td><td class="num">&minus;1.18%</td><td class="num">&minus;4.584</td><td class="num">&minus;1.5</td><td class="num">26.439</td><td class="num">14.272</td></tr>
+        <tr><td>Jul</td><td class="num">5.95%</td><td class="num">1.79%</td><td class="num">7.844</td><td class="num">5</td><td class="num">14.780</td><td class="num">7.410</td></tr>
+        <tr><td>Aug</td><td class="num">2.25%</td><td class="num">0.58%</td><td class="num">2.845</td><td class="num">3</td><td class="num">0.311</td><td class="num">0.522</td></tr>
+        <tr><td>Sep</td><td class="num">&minus;3.30%</td><td class="num">&minus;1.16%</td><td class="num">&minus;4.421</td><td class="num">&minus;2.5</td><td class="num">32.659</td><td class="num">22.827</td></tr>
+        <tr><td>Oct</td><td class="num">6.82%</td><td class="num">1.76%</td><td class="num">8.703</td><td class="num">4.5</td><td class="num">13.974</td><td class="num">4.938</td></tr>
+        <tr class="sub"><td colspan="5">Total</td><td class="num">102.888</td><td class="num">54.556</td></tr></table></div>
+      <p>R&#772;<sub>i</sub> = 2.415%, R&#772;<sub>m</sub> = 2.278%. Cov = 102.888 / 9 = 11.432. Var = 54.556 / 9 = 6.062.</p>
+      <p><b>&beta; = 11.432 / 6.062 = 1.89</b>. In rupee terms the US security is much more volatile than the BSE index.</p>
+      <p class="flag">The notes list the R<sub>S</sub> values (they match) but write only one R<sub>C</sub>, and 0.036 for February is wrong: it is (84 &minus; 83)/83 = 1.20%.</p>
+    </div></details>
+  </article>
+
+  <article class="slide note" id="u3-portfolio"><h3>Portfolio return and risk (two securities)</h3>
+    <p class="math">Portfolio return: R<sub>p</sub> = &Sigma; x<sub>i</sub> R<sub>i</sub></p>
+    <p class="math">Portfolio risk: &sigma;<sub>p</sub>&sup2; = x<sub>A</sub>&sup2;&sigma;<sub>A</sub>&sup2; + x<sub>B</sub>&sup2;&sigma;<sub>B</sub>&sup2; + 2 x<sub>A</sub> x<sub>B</sub> r<sub>AB</sub> &sigma;<sub>A</sub> &sigma;<sub>B</sub></p>
+    <p class="math">Correlation: r<sub>AB</sub> = <span class="frac"><span>Cov(A, B)</span><span>&sigma;<sub>A</sub> &sigma;<sub>B</sub></span></span></p>
+    <p>x is the weight of each security, &sigma; is its standard deviation (&radic;(&Sigma;(R &minus; R&#772;)&sup2; / n)), and r is the correlation between them.</p>
+    <p><b>Q.</b> A portfolio holds 50% in A and 50% in B. The monthly currency adjusted returns (already converted to &#8377;) are below. Calculate the expected portfolio return and risk.</p>
+    <table><tr><th>Month</th><th class="num">A (%)</th><th class="num">B (%)</th></tr>
+      <tr><td>1</td><td class="num">6</td><td class="num">8</td></tr><tr><td>2</td><td class="num">10</td><td class="num">12</td></tr><tr><td>3</td><td class="num">&minus;2</td><td class="num">0</td></tr><tr><td>4</td><td class="num">4</td><td class="num">6</td></tr><tr><td>5</td><td class="num">2</td><td class="num">4</td></tr></table>
+    <details class="sol"><summary>Show solution</summary><div>
+      <p>Average return: A = 20 / 5 = 4%, B = 30 / 5 = 6%</p>
+      <p>(i) R<sub>p</sub> = 0.5 &times; 4 + 0.5 &times; 6 = <b>5%</b></p>
+      <table><tr><th>Month</th><th class="num">A &minus; &#256;</th><th class="num">B &minus; B&#772;</th><th class="num">Product</th><th class="num">(A &minus; &#256;)&sup2;</th><th class="num">(B &minus; B&#772;)&sup2;</th></tr>
+        <tr><td>1</td><td class="num">2</td><td class="num">2</td><td class="num">4</td><td class="num">4</td><td class="num">4</td></tr>
+        <tr><td>2</td><td class="num">6</td><td class="num">6</td><td class="num">36</td><td class="num">36</td><td class="num">36</td></tr>
+        <tr><td>3</td><td class="num">&minus;6</td><td class="num">&minus;6</td><td class="num">36</td><td class="num">36</td><td class="num">36</td></tr>
+        <tr><td>4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td>5</td><td class="num">&minus;2</td><td class="num">&minus;2</td><td class="num">4</td><td class="num">4</td><td class="num">4</td></tr>
+        <tr class="sub"><td>Total</td><td class="num">0</td><td class="num">0</td><td class="num">80</td><td class="num">80</td><td class="num">80</td></tr></table>
+      <p>&sigma;<sub>A</sub> = &radic;(80 / 5) = 4%. &sigma;<sub>B</sub> = &radic;(80 / 5) = 4%. Cov = 80 / 5 = 16, so r<sub>AB</sub> = 16 / (4 &times; 4) = <b>1</b>.</p>
+      <p>(ii) &sigma;<sub>p</sub>&sup2; = 0.25 &times; 16 + 0.25 &times; 16 + 2 &times; 0.5 &times; 0.5 &times; 1 &times; 4 &times; 4 = 4 + 4 + 8 = 16, so <b>&sigma;<sub>p</sub> = 4%</b>.</p>
+      <p>With r = 1 the two securities move together exactly, so combining them gives no reduction in risk.</p>
+      <p class="flag">In the notes, month 5's deviations are written as 2 and &minus;2. Both are &minus;2 (2 &minus; 4 and 4 &minus; 6), and the deviation totals are 0, not 4. The squares and the final answers are unaffected.</p>
+    </div></details>
   </article>
 </section>
 
@@ -1143,7 +1366,7 @@
   <header class="unit-head">
     <div class="eyebrow">Unit 4</div>
     <h1>Sectoral Risk Analysis</h1>
-    <p class="lede">From the prof's notes (T4) and slides (T3, PPP &amp; IRP). Two small additions from the class notes are at the end.</p>
+    <p class="lede">From the prof's notes (T4) and slides (T3, PPP &amp; IRP). One small addition from the class notes is at the end.</p>
     <div class="meta"><div class="progress"><span></span></div><span class="progress-label"></span></div>
   </header>
 
@@ -1443,19 +1666,8 @@
 
   <div class="notes-banner">
     <h2>From the class notes</h2>
-    <p>The class notes on PPP and IRP match the PPT almost line for line. Only two things go beyond them.</p>
+    <p>The class notes on PPP and IRP match the PPT almost line for line. The rupee-adjusted return formula used in the investor questions is written out in Unit 3 (currency adjusted return).</p>
   </div>
-
-  <article class="slide note" id="u4-rca"><h3>Rupee-adjusted return formula, written out</h3>
-    <p>The PPT uses this in the two Relative PPP investor questions but never states it as a formula. The notes box it:</p>
-    <p class="math">R<sub>CA</sub> = (1 + R<sub>S</sub>)(1 + R<sub>C</sub>) &minus; 1</p>
-    <ul>
-      <li>R<sub>CA</sub> = currency-adjusted (rupee) return</li>
-      <li>R<sub>S</sub> = return on the security in its own currency (e.g. 8% on the US security)</li>
-      <li>R<sub>C</sub> = currency return = (S<sub>1</sub> &minus; S<sub>0</sub>) / S<sub>0</sub></li>
-    </ul>
-    <p>This is the same idea as the Unit 2 notes on returns: in a foreign market, return comes from stock performance, yield <i>and</i> forex.</p>
-  </article>
 
   <article class="slide note" id="u4-irp-premium"><h3>Forward premium for IRP question 1</h3>
     <p>The first IRP question in the PPT only asks for the forward rate. In class the forward premium was also worked out:</p>
@@ -1663,18 +1875,12 @@
       <li>Mutual funds</li>
       <li>Participants and functions (of derivatives markets)</li>
     </ul></div>
-    <div class="plan-unit"><h5>Unit 3 (no slides or notes yet, so all of it)</h5><ul class="miss">
+    <div class="plan-unit"><h5>Unit 3 (no slides yet)</h5><ul class="miss">
       <li>Risk and Uncertainty</li>
       <li>Causes for risk</li>
       <li>Types of Risk: Systematic and Unsystematic risk</li>
       <li>Expected risk return trade-off</li>
-      <li>Calculation of expected return</li>
-      <li>Calculation of risk</li>
-      <li>Beta</li>
       <li>Portfolio management process</li>
-      <li>Portfolio return</li>
-      <li>Portfolio risk</li>
-      <li>International portfolio diversification</li>
       <li>Feasible set of portfolios</li>
       <li>Efficient set of portfolios</li>
       <li>Selection of optimal portfolio</li>
@@ -1718,7 +1924,7 @@
       <tr><td>Derivatives in global markets</td><td><span class="st ok">Covered</span></td><td>Derivatives in global markets</td></tr>
       <tr><td>Forwards, futures</td><td><span class="st ok">Covered</span></td><td>Forward Contract vs Futures Contract table; hedging examples</td></tr>
       <tr><td>Participants and functions</td><td><span class="st miss">Missing</span></td><td>Uses of forwards and futures are given (hedging exchange rate, interest rate and commodity risk), but there's no section on participants.</td></tr>
-      <tr><td>Valuation problems</td><td><span class="st part">Partly</span></td><td>Forward hedge savings example; class notes: return with forex and ADR numericals. No forward/futures pricing problems.</td></tr>
+      <tr><td>Valuation problems</td><td><span class="st part">Partly</span></td><td>Forward hedge savings example; class notes: return with forex, ADR numericals, domestic vs ADR returns. No forward/futures pricing problems.</td></tr>
       <tr><td>ADRs and GDRs</td><td><span class="st ok">Covered</span></td><td>Depository Receipts, ADRs, GDRs; class notes: ADR process and numericals</td></tr>
       <tr><td>Green instruments</td><td><span class="st ok">Covered</span></td><td>Green Instruments (green bonds, loans, funds, SLBs). The Sustainability-Linked Loans heading has no text in the PPT.</td></tr>
     </table></div>
@@ -1727,22 +1933,22 @@
   <article class="slide"><h3>Unit 3: Portfolio Construction and Risk Management</h3>
     <div class="wrap"><table class="plan">
       <tr><th>Course plan topic</th><th>Status</th><th>Where on this site</th></tr>
-      <tr><td>Risk and Uncertainty</td><td><span class="st miss">Missing</span></td><td rowspan="16">No Unit 3 slides or class notes have been shared yet.</td></tr>
-      <tr><td>Causes for risk</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Types of Risk: Systematic and Unsystematic risk</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Expected risk return trade-off</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Calculation of expected return</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Calculation of risk</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Beta</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Portfolio management process</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Portfolio return</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Portfolio risk</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>International portfolio diversification</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Feasible set of portfolios</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Efficient set of portfolios</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Selection of optimal portfolio</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Markowitz model</td><td><span class="st miss">Missing</span></td></tr>
-      <tr><td>Role of AI in portfolio management</td><td><span class="st miss">Missing</span></td></tr>
+      <tr><td>Risk and Uncertainty</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Causes for risk</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Types of Risk: Systematic and Unsystematic risk</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Expected risk return trade-off</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Calculation of expected return</td><td><span class="st note">Class notes only</span></td><td>Expected return under economic scenarios; average monthly return</td></tr>
+      <tr><td>Calculation of risk</td><td><span class="st note">Class notes only</span></td><td>SD under scenarios; SD from monthly returns (sample vs population)</td></tr>
+      <tr><td>Beta</td><td><span class="st note">Class notes only</span></td><td>Beta (covariance / market variance), 3 questions</td></tr>
+      <tr><td>Portfolio management process</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Portfolio return</td><td><span class="st note">Class notes only</span></td><td>Portfolio return and risk (two securities)</td></tr>
+      <tr><td>Portfolio risk</td><td><span class="st note">Class notes only</span></td><td>Portfolio return and risk (two securities), with correlation</td></tr>
+      <tr><td>International portfolio diversification</td><td><span class="st part">Partly</span></td><td>Currency adjusted return of foreign securities. Diversification itself (how combining countries reduces risk) isn't explained.</td></tr>
+      <tr><td>Feasible set of portfolios</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Efficient set of portfolios</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Selection of optimal portfolio</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Markowitz model</td><td><span class="st miss">Missing</span></td><td></td></tr>
+      <tr><td>Role of AI in portfolio management</td><td><span class="st miss">Missing</span></td><td></td></tr>
     </table></div>
   </article>
 
