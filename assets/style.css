@@ -82,7 +82,7 @@ main{flex:1;min-width:0;padding:0 40px 120px}
 
 /* ---------- content sections ---------- */
 .slide{position:relative;padding:30px 0 26px;border-bottom:1px solid var(--line)}
-.slide h3{font:600 21px/1.3 var(--sans);letter-spacing:-.012em;margin:0 70px 14px 0;color:var(--text)}
+.slide h3{font:600 21px/1.3 var(--sans);letter-spacing:-.012em;margin:0 0 14px;color:var(--text)}
 .slide h4{font:600 16.5px/1.35 var(--sans);margin:26px 0 10px;padding-top:20px;border-top:1px dashed var(--line2);color:var(--text)}
 .slide h5{font:600 13px/1.4 var(--sans);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:18px 0 6px}
 .slide p{margin:8px 0;color:var(--soft)}
@@ -131,7 +131,7 @@ details.sol[open] summary{border-bottom:1px solid var(--line)}
 details.sol>div{padding:6px 16px 12px}
 
 /* done toggle */
-.donebtn{position:absolute;top:30px;right:0;display:flex;align-items:center;gap:6px;font:500 12.5px var(--sans);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 8px;cursor:pointer}
+.donebtn{display:flex;margin:18px 0 0 auto;align-items:center;gap:6px;font:500 12.5px var(--sans);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 8px;cursor:pointer}
 .donebtn::before{content:"";width:12px;height:12px;border:1.5px solid currentColor;border-radius:50%}
 .donebtn:hover{color:var(--text);border-color:var(--line2)}
 .slide.isdone .donebtn{color:var(--ok);border-color:var(--ok)}
@@ -145,7 +145,6 @@ details.sol>div{padding:6px 16px 12px}
 .notes-banner p{margin:8px 0 0;color:var(--muted);font-size:14.5px}
 .slide.note{border-left:2px solid var(--note-line);padding-left:22px;margin-left:-24px;background:linear-gradient(90deg,var(--note-tint),transparent 60%)}
 .slide.note::before{content:"Class notes";display:block;font:600 11px var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--note);margin-bottom:6px}
-.slide.note .donebtn{top:52px}
 .tag{display:none}
 
 /* part divider (Unit 4) */
@@ -167,6 +166,17 @@ table.plan td:nth-child(2){width:120px}
 /* misc */
 .hide{display:none!important}
 mark{background:rgba(255,214,102,.35);color:inherit;border-radius:3px;padding:0 1px}
+mark:not(.hl){background:var(--accent-tint);outline:1px solid var(--accent)}
+
+/* highlighter */
+mark.hl{background:rgba(250,204,21,.34);color:inherit;border-radius:0;padding:0}
+html[data-theme="light"] mark.hl{background:#fff176}
+body.hl-on .unit{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23facc15' stroke='%23333' stroke-width='1.4' stroke-linejoin='round'%3E%3Cpath d='m9 11-6 6v3h9l3-3z'/%3E%3Cpath d='m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4z'/%3E%3C/svg%3E") 3 21, text}
+body.hl-on .unit ::selection{background:rgba(250,204,21,.45)}
+body.hl-on mark.hl{cursor:pointer}
+body.hl-on mark.hl:hover{box-shadow:0 0 0 1px var(--note)}
+#hltoggle[aria-pressed="true"]{color:#b98a00;border-color:#facc15;background:rgba(250,204,21,.14)}
+html[data-theme="dark"] #hltoggle[aria-pressed="true"]{color:#facc15}
 #zoom{position:fixed;inset:0;background:rgba(5,6,8,.88);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
 #zoom img{max-width:100%;max-height:100%;background:#fff;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
 #zoom.on{display:flex}
@@ -184,4 +194,4 @@ mark{background:rgba(255,214,102,.35);color:inherit;border-radius:3px;padding:0 
   .plan-summary .plan-unit{grid-template-columns:1fr}
   .plan-summary ul.miss{columns:1}
 }
-@media (max-width:640px){ .brand{display:none} }
+@media (max-width:640px){ .brand{display:none} .tools .pillbtn span{display:none} .tools .pillbtn{padding:0 9px} }

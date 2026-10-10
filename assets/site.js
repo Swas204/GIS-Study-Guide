@@ -120,8 +120,12 @@
     }
 
     // search within the current tab
+    function unwrap(m) {
+      while (m.firstChild) m.parentNode.insertBefore(m.firstChild, m);
+      m.remove();
+    }
     function clearMarks(el) {
-      [].slice.call(el.querySelectorAll('mark')).forEach(function (m) { m.replaceWith(document.createTextNode(m.textContent)); });
+      [].slice.call(el.querySelectorAll('mark:not(.hl)')).forEach(unwrap);
       el.normalize();
     }
     function markText(el, q) {
@@ -174,6 +178,124 @@
       m.innerHTML = '<b>Everything here is marked done.</b>Click "Show all" to see it again.';
       u.appendChild(m);
     });
+
+    // clear every Done mark
+    document.getElementById('undoneall').onclick = function () {
+      var done = document.querySelectorAll('.slide.isdone');
+      if (!done.length) { alert('Nothing is marked done yet.'); return; }
+      if (!confirm('Clear the Done mark on all ' + done.length + ' sections, in every unit?')) return;
+      [].slice.call(done).forEach(function (s) { s.classList.remove('isdone'); localStorage.removeItem(KEY + s.id); });
+      buildSide(); updateProgress();
+    };
+
+    // highlighter: stays on until the button is clicked again; highlights are saved per section
+    var hlBtn = document.getElementById('hltoggle');
+    function setHl(on) {
+      document.body.classList.toggle('hl-on', on);
+      hlBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    hlBtn.onclick = function () { setHl(!document.body.classList.contains('hl-on')); };
+
+    // text nodes of a section with their offsets (button text is skipped)
+    function textMap(s) {
+      var walker = document.createTreeWalker(s, NodeFilter.SHOW_TEXT, null);
+      var list = [], pos = 0, str = '';
+      while (walker.nextNode()) {
+        var t = walker.currentNode;
+        if (t.parentNode.closest('button')) continue;
+        list.push({ node: t, start: pos });
+        pos += t.length; str += t.nodeValue;
+      }
+      return { list: list, text: str };
+    }
+    // highlighted ranges currently in the DOM, merged
+    function readHl(s) {
+      var out = [];
+      textMap(s).list.forEach(function (x) {
+        if (!x.node.parentNode.closest('mark.hl')) return;
+        var a = x.start, b = x.start + x.node.length, last = out[out.length - 1];
+        if (last && last[1] >= a) last[1] = Math.max(last[1], b); else out.push([a, b]);
+      });
+      return out;
+    }
+    function merge(r) {
+      r = r.filter(function (x) { return x[1] > x[0]; }).sort(function (a, b) { return a[0] - b[0]; });
+      var out = [];
+      r.forEach(function (x) {
+        var last = out[out.length - 1];
+        if (last && last[1] >= x[0]) last[1] = Math.max(last[1], x[1]); else out.push([x[0], x[1]]);
+      });
+      return out;
+    }
+    function paintHl(s, ranges) {
+      [].slice.call(s.querySelectorAll('mark.hl')).forEach(unwrap);
+      s.normalize();
+      if (!ranges.length) return;
+      textMap(s).list.forEach(function (x) {
+        var t = x.node, o = x.start, L = t.length;
+        if (!t.nodeValue.trim()) return; // whitespace between table cells etc.
+        ranges.filter(function (r) { return r[0] < o + L && r[1] > o; }).reverse().forEach(function (r) {
+          var a = Math.max(r[0], o) - o, b = Math.min(r[1], o + L) - o;
+          var mid = a > 0 ? t.splitText(a) : t;
+          if (b - a < mid.length) mid.splitText(b - a);
+          var m = document.createElement('mark'); m.className = 'hl';
+          mid.parentNode.insertBefore(m, mid); m.appendChild(mid);
+        });
+      });
+    }
+    function saveHl(s) {
+      var r = readHl(s), text = textMap(s).text;
+      if (r.length) localStorage.setItem(KEY + 'hl:' + s.id, JSON.stringify(r.map(function (x) { return [x[0], x[1], text.slice(x[0], x[1])]; })));
+      else localStorage.removeItem(KEY + 'hl:' + s.id);
+    }
+    // restore saved highlights; if the section text has changed, find the same words again
+    [].slice.call(document.querySelectorAll('.slide')).forEach(function (s) {
+      var saved; try { saved = JSON.parse(localStorage.getItem(KEY + 'hl:' + s.id) || '[]'); } catch (e) { saved = []; }
+      if (!saved.length) return;
+      var text = textMap(s).text;
+      var ranges = saved.map(function (x) {
+        if (text.slice(x[0], x[1]) === x[2]) return [x[0], x[1]];
+        var best = -1, i = text.indexOf(x[2]);
+        while (i >= 0) { if (best < 0 || Math.abs(i - x[0]) < Math.abs(best - x[0])) best = i; i = text.indexOf(x[2], i + 1); }
+        return best < 0 ? null : [best, best + x[2].length];
+      }).filter(Boolean);
+      paintHl(s, merge(ranges));
+    });
+
+    function onPick(e) {
+      if (!document.body.classList.contains('hl-on')) return;
+      var sel = window.getSelection();
+      var range = sel.rangeCount ? sel.getRangeAt(0) : null;
+      if (!range || range.collapsed) {
+        // a plain click on a highlight removes it
+        var m = e.target.closest && e.target.closest('mark.hl');
+        var ms = m && m.closest('.slide');
+        if (!ms) return;
+        var tm = textMap(ms), off = -1;
+        tm.list.forEach(function (x) { if (off < 0 && m.contains(x.node)) off = x.start; });
+        paintHl(ms, readHl(ms).filter(function (r) { return !(r[0] <= off && off < r[1]); }));
+        saveHl(ms);
+        return;
+      }
+      var touched = [];
+      [].slice.call(document.querySelectorAll('.unit.on .slide')).forEach(function (s) {
+        if (!range.intersectsNode(s)) return;
+        var add = [];
+        textMap(s).list.forEach(function (x) {
+          if (!range.intersectsNode(x.node)) return;
+          var a = x.node === range.startContainer ? range.startOffset : 0;
+          var b = x.node === range.endContainer ? range.endOffset : x.node.length;
+          if (b > a) add.push([x.start + a, x.start + b]);
+        });
+        if (!add.length) return;
+        paintHl(s, merge(readHl(s).concat(add)));
+        touched.push(s);
+      });
+      sel.removeAllRanges();
+      touched.forEach(saveHl);
+    }
+    document.addEventListener('mouseup', function (e) { if (e.button === 0 && !e.target.closest('button, input')) onPick(e); });
+    document.addEventListener('touchend', function (e) { setTimeout(function () { onPick(e); }, 350); });
 
     document.getElementById('theme').onclick = function () {
       var t = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';

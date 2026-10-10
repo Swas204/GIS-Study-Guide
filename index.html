@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=4">
-<script src="assets/site.js?v=4"></script>
+<link rel="stylesheet" href="assets/style.css?v=5">
+<script src="assets/site.js?v=5"></script>
 </head>
 <body>
 <div class="top">
@@ -19,8 +19,14 @@
   <nav class="tabs" aria-label="Units"></nav>
   <div class="tools">
     <label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search this unit"></label>
+    <button id="hltoggle" class="pillbtn" type="button" title="Highlighter: stays on until you click it again. Select text to highlight it, click a highlight to remove it." aria-pressed="false">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11-6 6v3h9l3-3"/><path d="m22 12-4.6 4.6a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L14 4"/></svg><span>Highlight</span>
+    </button>
     <button id="donefilter" class="pillbtn" type="button" title="Show only the sections you haven't marked done" aria-pressed="false">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg><span>Hide done</span>
+    </button>
+    <button id="undoneall" class="pillbtn" type="button" title="Clear every Done mark, in all units">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span>Undo all done</span>
     </button>
     <button id="theme" class="iconbtn" type="button" title="Light / dark theme" aria-label="Toggle theme">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
