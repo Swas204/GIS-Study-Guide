@@ -179,11 +179,12 @@
       u.appendChild(m);
     });
 
-    // clear every Done mark
+    // clear the Done marks in the open tab only
     document.getElementById('undoneall').onclick = function () {
-      var done = document.querySelectorAll('.slide.isdone');
-      if (!done.length) { alert('Nothing is marked done yet.'); return; }
-      if (!confirm('Clear the Done mark on all ' + done.length + ' sections, in every unit?')) return;
+      var u = current(), name = u.getAttribute('data-tab');
+      var done = u.querySelectorAll('.slide.isdone');
+      if (!done.length) { alert('Nothing in ' + name + ' is marked done yet.'); return; }
+      if (!confirm('Clear the Done mark on ' + done.length + (done.length === 1 ? ' section' : ' sections') + ' in ' + name + '? Other units stay as they are.')) return;
       [].slice.call(done).forEach(function (s) { s.classList.remove('isdone'); localStorage.removeItem(KEY + s.id); });
       buildSide(); updateProgress();
     };
