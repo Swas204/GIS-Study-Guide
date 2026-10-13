@@ -27,18 +27,18 @@ a:hover{text-decoration:underline}
   background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .brand{font-family:var(--serif);font-weight:600;font-size:17px;white-space:nowrap;letter-spacing:-.01em}
 .brand span{font-family:var(--sans);font-weight:500;font-size:12px;color:var(--muted);margin-left:6px;letter-spacing:.02em}
-.tabs{display:flex;gap:2px;height:100%;overflow-x:auto;scrollbar-width:none}
+.tabs{display:flex;gap:2px;min-width:0;height:100%;overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
-.tabs button{position:relative;height:100%;padding:0 12px;background:none;border:0;color:var(--muted);font:500 14px var(--sans);cursor:pointer;white-space:nowrap}
+.tabs button{position:relative;height:100%;padding:0 9px;background:none;border:0;color:var(--muted);font:500 14px var(--sans);cursor:pointer;white-space:nowrap}
 .tabs button:hover{color:var(--text)}
 .tabs button.on{color:var(--text)}
-.tabs button.on::after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2px;background:var(--accent);border-radius:2px}
+.tabs button.on::after{content:"";position:absolute;left:9px;right:9px;bottom:-1px;height:2px;background:var(--accent);border-radius:2px}
 .tabs button.plan{margin-left:10px}
 .tabs button.plan::before{content:"";position:absolute;left:-5px;top:30%;bottom:30%;width:1px;background:var(--line2)}
 .tools{margin-left:auto;display:flex;gap:8px;align-items:center}
 .search{display:flex;align-items:center;gap:7px;height:34px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--muted)}
 .search:focus-within{border-color:var(--accent)}
-.search input{border:0;outline:0;background:transparent;color:var(--text);font:14px var(--sans);width:170px}
+.search input{border:0;outline:0;background:transparent;color:var(--text);font:14px var(--sans);width:130px}
 .iconbtn{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);cursor:pointer}
 .iconbtn:hover{color:var(--text);background:var(--raised);border-color:var(--line)}
 
@@ -183,6 +183,7 @@ html[data-theme="dark"] #hltoggle[aria-pressed="true"]{color:#facc15}
 .empty{color:var(--muted);padding:40px 0;text-align:center}
 .scrim{display:none}
 
+@media (max-width:1600px){ .tools .pillbtn span{display:none} .tools .pillbtn{padding:0 9px} }
 @media (max-width:1000px){
   .brand span{display:none}
   .search input{width:110px}

@@ -48,7 +48,7 @@
       var b = document.createElement('button');
       b.type = 'button';
       b.textContent = u.getAttribute('data-tab');
-      if (u.id === 'plan') b.className = 'plan';
+      if (u.id === 'plan' || u.hasAttribute('data-sep')) b.className = 'plan';
       b.onclick = function () { show(u.id); window.scrollTo(0, 0); history.replaceState(null, '', '#' + u.id); };
       b.dataset.unit = u.id;
       tabs.appendChild(b);
@@ -72,7 +72,8 @@
     function buildSide() {
       var u = current(); if (!u) return;
       var hasSlides = u.id === 'plan' || u.querySelector('.slide:not(.note)');
-      var html = hasSlides ? '<h4>' + (u.id === 'plan' ? 'Course plan check' : 'From the slides') + '</h4>' : '';
+      var head = u.id === 'plan' ? 'Course plan check' : (u.getAttribute('data-sidehead') || 'From the slides');
+      var html = hasSlides && !u.hasAttribute('data-nohead') ? '<h4>' + head + '</h4>' : '';
       var inNotes = false;
       [].slice.call(u.querySelectorAll('.slide, .notes-banner, .partdiv')).forEach(function (s) {
         if (s.classList.contains('hide')) return;
@@ -308,6 +309,12 @@
     document.addEventListener('click', function (e) {
       if (e.target.matches('.slide img')) { zoom.querySelector('img').src = e.target.src; zoom.classList.add('on'); }
       else if (e.target.closest('#zoom')) zoom.classList.remove('on');
+    });
+
+    // links to another tab (e.g. href="#missed") switch to it
+    window.addEventListener('hashchange', function () {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el && el.classList.contains('unit') && !el.classList.contains('on')) { show(el.id); window.scrollTo(0, 0); }
     });
 
     // open the tab from the hash (a tab id or a section inside it)
